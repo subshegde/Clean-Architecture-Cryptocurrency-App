@@ -4,7 +4,7 @@ import com.example.cleanarchitecturecryptocurrencyapp.domain.model.Coin
 import java.lang.Error
 
 data class CoinListState(
-    val isLong: Boolean = false,
+    val isLoading: Boolean = false,
     val coins: List<Coin> = emptyList(),
     val error: String = ""
 )

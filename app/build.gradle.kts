@@ -55,7 +55,8 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.3.2") // LiveData with Compose
 
     // Hilt Dependencies for Dependency Injection
-    implementation("com.google.dagger:hilt-android:2.42")  // Hilt Android Dependency
+    implementation("com.google.dagger:hilt-android:2.42")
+    implementation(libs.androidx.navigation.runtime.android)  // Hilt Android Dependency
     kapt("com.google.dagger:hilt-compiler:2.42")  // Hilt Compiler for annotation processing
 
     // Gson for JSON Parsing

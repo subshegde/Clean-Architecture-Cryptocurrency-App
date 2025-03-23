@@ -6,14 +6,14 @@ import com.example.cleanarchitecturecryptocurrencyapp.data.remote.dto.CoinPaprik
 import com.example.cleanarchitecturecryptocurrencyapp.domain.repository.CoinRepository
 import javax.inject.Inject
 
-class CoinRepositoryImpl @Inject constructor(private val api: CoinPaprikaApi) : CoinRepository{
-    override suspend fun getCoins(): List<CoinDto> {
+class CoinRepositoryImplementation @Inject constructor(
+    private  val api : CoinPaprikaApi
+) : CoinRepository{
+    override suspend fun getCoins(): List<CoinDto>{
         return api.getCoins()
     }
 
-    override suspend fun getCoinById(coinId: String): CoinDetailsDto {
+    override suspend fun getCoinById(coinId : String) : CoinDetailsDto{
         return api.getCoinById(coinId)
     }
-
-
 }
